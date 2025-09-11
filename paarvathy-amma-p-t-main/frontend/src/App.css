@@ -1,0 +1,188 @@
+/* Studio-Master inspired styles for Poppy & Teal */
+
+/* Font Family Classes */
+.font-poppins {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+    transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Loading animation - studio-master style */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-rotate {
+    animation: rotate 2s linear infinite;
+}
+
+/* Background image utilities */
+.bg-img {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Gradient overlay */
+.gradient-overlay {
+    background: linear-gradient(45deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.1) 100%);
+}
+
+/* Custom hero content positioning */
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 10;
+}
+
+/* Image hover effects */
+.image-hover-effect {
+    overflow: hidden;
+}
+
+.image-hover-effect img {
+    transition: transform 0.5s ease;
+}
+
+.image-hover-effect:hover img {
+    transform: scale(1.05);
+}
+
+/* Button styles matching studio-master */
+.studio-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 30px;
+    background: #1d1d1d;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.studio-btn:hover {
+    background: #333;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Social sidebar animation */
+.social-sidebar-enter {
+    transform: translateX(-100%);
+}
+
+.social-sidebar-enter-active {
+    transform: translateX(0);
+    transition: transform 0.3s ease;
+}
+
+/* Modal animations */
+.modal-overlay {
+    backdrop-filter: blur(5px);
+}
+
+/* Product grid animations */
+.product-enter {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.product-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Carousel indicators - studio-master style */
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 15;
+}
+
+.carousel-indicator {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.5);
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-indicator.active {
+    border-color: white;
+    transform: scale(1.1);
+}
+
+.carousel-indicator:hover {
+    border-color: rgba(255,255,255,0.8);
+}
+
+/* Text animations */
+.slide-up {
+    animation: slideUp 0.6s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Search modal styles */
+.search-modal {
+    backdrop-filter: blur(10px);
+}
+
+/* Cart drawer styles */
+.cart-drawer {
+    box-shadow: -10px 0 25px rgba(0,0,0,0.1);
+}
