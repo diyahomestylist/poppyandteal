@@ -55,7 +55,7 @@ body {
   justify-content: center;
   flex-direction: column;
   z-index: 9999;
-  animation: fadeOut 0.5s ease-in-out 1.5s forwards;
+  animation: fadeOut 0.5s ease-in-out 1.0s forwards;
 }
 
 @keyframes fadeOut {
