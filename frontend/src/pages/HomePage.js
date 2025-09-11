@@ -5,7 +5,7 @@ import { ChevronLeft, ChevronRight, Menu, X, Instagram, Mail, Phone, MessageCirc
 const HomePage = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
 
   const macrame_images = [
     { src: '/IMG_3122.JPG', title: 'Handcrafted Bags', subtitle: 'Where Creativity Meets Elegance' },
