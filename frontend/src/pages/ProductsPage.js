@@ -4,16 +4,75 @@ import { ArrowLeft, MessageCircle, Filter } from 'lucide-react';
 
 const ProductsPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
-  
+
   const products = [
-    { id: 1, name: 'Boho Shoulder Bag', category: 'bags', price: 1500, image: '/IMG_3122.JPG', description: 'Handwoven macramé shoulder bag perfect for daily use' },
-    { id: 2, name: 'Wall Hanging - Nature', category: 'home-decor', price: 1200, image: '/IMG_3131.JPG', description: 'Beautiful wall hanging with natural motifs' },
-    { id: 3, name: 'Plant Hanger Set', category: 'home-decor', price: 800, image: '/IMG_3136.JPG', description: 'Set of 3 hanging planters for your green friends' },
-    { id: 4, name: 'Statement Clutch', category: 'bags', price: 900, image: '/IMG_3139.JPG', description: 'Elegant evening clutch with intricate patterns' },
-    { id: 5, name: 'Decorative Wall Art', category: 'home-decor', price: 1800, image: '/IMG_3144.JPG', description: 'Large statement piece for living rooms' },
-    { id: 6, name: 'Crossbody Bag', category: 'bags', price: 1300, image: '/IMG_3145.JPG', description: 'Versatile crossbody bag for modern lifestyle' },
-    { id: 7, name: 'Table Runner', category: 'home-decor', price: 600, image: '/IMG_3147.JPG', description: 'Elegant macramé table runner for dining' },
-    { id: 8, name: 'Bohemian Tote', category: 'bags', price: 1600, image: '/IMG_3151.JPG', description: 'Spacious tote bag with boho charm' }
+    // Bags
+    {
+      id: 1,
+      name: 'Boho Shoulder Bag',
+      category: 'bags',
+      price: 1500,
+      image: '/IMG_3122.JPG', // ✅ green shoulder bag with pink knots
+      description: 'Handwoven macramé shoulder bag perfect for daily use'
+    },
+    {
+      id: 6,
+      name: 'Crossbody Bag',
+      category: 'bags',
+      price: 1300,
+      image: '/IMG_3145.JPG', // ✅ bag with rounded wooden handle
+      description: 'Versatile crossbody bag for modern lifestyle'
+    },
+    {
+      id: 8,
+      name: 'Bohemian Tote',
+      category: 'bags',
+      price: 1600,
+      image: '/IMG_3151.JPG', // ✅ red fringe tote
+      description: 'Spacious tote bag with boho charm'
+    },
+
+    // Home Décor
+    {
+      id: 2,
+      name: 'Wall Hanging - Nature',
+      category: 'home-decor',
+      price: 1200,
+      image: '/IMG_3131.JPG', // ✅ green wall hanging
+      description: 'Beautiful wall hanging with natural motifs'
+    },
+    {
+      id: 3,
+      name: 'Plant Hanger Set',
+      category: 'home-decor',
+      price: 800,
+      image: '/IMG_3136.JPG', // ✅ orange & white beaded plant hangers
+      description: 'Set of 3 hanging planters for your green friends'
+    },
+    {
+      id: 4,
+      name: 'Statement Clutch',
+      category: 'home-decor',
+      price: 900,
+      image: '/IMG_3139.JPG', // ✅ striped clutch
+      description: 'Elegant evening clutch with intricate patterns'
+    },
+    {
+      id: 5,
+      name: 'Decorative Wall Art',
+      category: 'home-decor',
+      price: 1800,
+      image: '/IMG_3144.JPG', // ✅ blue butterfly knot art
+      description: 'Large statement piece for living rooms'
+    },
+    {
+      id: 7,
+      name: 'Table Runner',
+      category: 'home-decor',
+      price: 600,
+      image: '/IMG_3147.JPG', // ✅ blue coil runner with tassels
+      description: 'Elegant macramé table runner for dining'
+    }
   ];
 
   const categories = [
@@ -22,14 +81,17 @@ const ProductsPage = () => {
     { id: 'home-decor', name: 'Home Décor' }
   ];
 
-  const filteredProducts = selectedCategory === 'all' 
-    ? products 
-    : products.filter(product => product.category === selectedCategory);
+  const filteredProducts =
+    selectedCategory === 'all'
+      ? products
+      : products.filter((product) => product.category === selectedCategory);
 
   const handleWhatsAppOrder = (product) => {
     const message = `Hi! I'm interested in the ${product.name} (₹${product.price}) from your Poppy and Teal collection. Could you please share more details?`;
-    const phoneNumber = "919381340487";
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    const phoneNumber = '+919381340487';
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      message
+    )}`;
     window.open(whatsappUrl, '_blank');
   };
 
@@ -55,10 +117,12 @@ const ProductsPage = () => {
               <span>Filter by Category</span>
             </div>
             <div className="category-buttons">
-              {categories.map(category => (
+              {categories.map((category) => (
                 <button
                   key={category.id}
-                  className={`category-btn ${selectedCategory === category.id ? 'active' : ''}`}
+                  className={`category-btn ${
+                    selectedCategory === category.id ? 'active' : ''
+                  }`}
                   onClick={() => setSelectedCategory(category.id)}
                 >
                   {category.name}
@@ -69,12 +133,12 @@ const ProductsPage = () => {
 
           {/* Products Grid */}
           <div className="products-grid">
-            {filteredProducts.map(product => (
+            {filteredProducts.map((product) => (
               <div key={product.id} className="product-card">
                 <div className="product-image">
                   <img src={product.image} alt={product.name} />
                   <div className="product-overlay">
-                    <button 
+                    <button
                       className="overlay-btn"
                       onClick={() => handleWhatsAppOrder(product)}
                     >
@@ -83,12 +147,12 @@ const ProductsPage = () => {
                     </button>
                   </div>
                 </div>
-                
+
                 <div className="product-info">
                   <h3>{product.name}</h3>
                   <p>{product.description}</p>
                   <div className="product-price">₹{product.price}</div>
-                  <button 
+                  <button
                     className="product-btn"
                     onClick={() => handleWhatsAppOrder(product)}
                   >
@@ -104,13 +168,19 @@ const ProductsPage = () => {
           <div className="custom-orders">
             <div className="custom-content">
               <h2>Need Something Custom?</h2>
-              <p>We create personalized macramé pieces tailored to your specific needs and style preferences.</p>
-              <button 
+              <p>
+                We create personalized macramé pieces tailored to your specific
+                needs and style preferences.
+              </p>
+              <button
                 className="custom-btn"
                 onClick={() => {
-                  const message = "Hi! I'm interested in a custom macramé piece. Could we discuss my requirements?";
-                  const phoneNumber = "919381340487";
-                  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+                  const message =
+                    "Hi! I'm interested in a custom macramé piece. Could we discuss my requirements?";
+                  const phoneNumber = '+919381340487';
+                  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+                    message
+                  )}`;
                   window.open(whatsappUrl, '_blank');
                 }}
               >
