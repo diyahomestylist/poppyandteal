@@ -6,22 +6,14 @@ const ProductsPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   
   const products = [
-    // The previous item's image was a hanging shelf
-    { id: 1, name: 'Macrame Hanging Shelf', category: 'home-decor', price: 1500, image: '/IMG_3122.JPG', description: 'Handwoven macramé shelf for plants or small decorative items' },
-    // The previous item's image was a macrame dreamcatcher
-    { id: 2, name: 'Boho Dream Catcher', category: 'home-decor', price: 1200, image: '/IMG_3131.JPG', description: 'Beautiful dream catcher with intricate weaving and natural motifs' },
-    // This one was a plant hanger, which was already correct
-    { id: 3, name: 'Plant Hanger Set', category: 'home-decor', price: 800, image: '/IMG_3136.JPG', description: 'Set of 3 hanging planters for your green friends' },
-    // The previous item's image was a macrame wall hanging
-    { id: 4, name: 'Intricate Wall Hanging', category: 'home-decor', price: 900, image: '/IMG_3139.JPG', description: 'Elegant wall art with intricate patterns for a boho look' },
-    // The previous item's image was a tote bag
-    { id: 5, name: 'Bohemian Macrame Tote Bag', category: 'bags', price: 1800, image: '/IMG_3144.JPG', description: 'Spacious tote bag perfect for daily use with a stylish macrame design' },
-    // The previous item's image was a large wall hanging
-    { id: 6, name: 'Large Statement Wall Art', category: 'home-decor', price: 1300, image: '/IMG_3145.JPG', description: 'Versatile large macrame wall art for living rooms or bedrooms' },
-    // The previous item's image was a table runner
-    { id: 7, name: 'Elegant Table Runner', category: 'home-decor', price: 600, image: '/IMG_3147.JPG', description: 'Elegant macramé table runner for dining or console tables' },
-    // The previous item's image was a clutch
-    { id: 8, name: 'Macrame Clutch Purse', category: 'bags', price: 1600, image: '/IMG_3151.JPG', description: 'Chic and compact clutch bag with beautiful macrame detailing' }
+    { id: 1, name: 'Macrame Hanging Shelf', category: 'home-decor', price: 1500, image: '/IMG_3122.JPG', description: 'Handwoven macramé shelf for plants or small decorative items.' },
+    { id: 2, name: 'Macrame Dream Catcher', category: 'home-decor', price: 1200, image: '/IMG_3131.JPG', description: 'A delicate dream catcher with intricate macrame patterns and feathers.' },
+    { id: 3, name: 'Plant Hanger Set', category: 'home-decor', price: 800, image: '/IMG_3136.JPG', description: 'Set of 3 hanging planters for your green friends.' },
+    { id: 4, name: 'Intricate Wall Hanging', category: 'home-decor', price: 900, image: '/IMG_3139.JPG', description: 'Elegant wall art with intricate geometric patterns for a boho look.' },
+    { id: 5, name: 'Bohemian Macrame Tote Bag', category: 'bags', price: 1800, image: '/IMG_3144.JPG', description: 'Spacious tote bag with a stylish macrame design, perfect for daily use.' },
+    { id: 6, name: 'Large Statement Wall Art', category: 'home-decor', price: 1300, image: '/IMG_3145.JPG', description: 'A large, versatile macrame wall art piece to make a statement in any room.' },
+    { id: 7, name: 'Elegant Table Runner', category: 'home-decor', price: 600, image: '/IMG_3147.JPG', description: 'A long, elegant macramé table runner for dining or console tables.' },
+    { id: 8, name: 'Macrame Clutch Purse', category: 'bags', price: 1600, image: '/IMG_3151.JPG', description: 'A chic and compact clutch bag with beautiful macrame detailing.' }
   ];
 
   const categories = [
