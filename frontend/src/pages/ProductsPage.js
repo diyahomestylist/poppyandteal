@@ -6,14 +6,14 @@ const ProductsPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
   
   const products = [
-    { id: 1, name: 'Macrame Hanging Shelf', category: 'home-decor', price: 1500, image: '/IMG_3122.JPG', description: 'Handwoven macramé shelf for plants or small decorative items.' },
-    { id: 2, name: 'Macrame Dream Catcher', category: 'home-decor', price: 1200, image: '/IMG_3131.JPG', description: 'A delicate dream catcher with intricate macrame patterns and feathers.' },
-    { id: 3, name: 'Plant Hanger Set', category: 'home-decor', price: 800, image: '/IMG_3136.JPG', description: 'Set of 3 hanging planters for your green friends.' },
-    { id: 4, name: 'Intricate Wall Hanging', category: 'home-decor', price: 900, image: '/IMG_3139.JPG', description: 'Elegant wall art with intricate geometric patterns for a boho look.' },
-    { id: 5, name: 'Bohemian Macrame Tote Bag', category: 'bags', price: 1800, image: '/IMG_3144.JPG', description: 'Spacious tote bag with a stylish macrame design, perfect for daily use.' },
-    { id: 6, name: 'Large Statement Wall Art', category: 'home-decor', price: 1300, image: '/IMG_3145.JPG', description: 'A large, versatile macrame wall art piece to make a statement in any room.' },
-    { id: 7, name: 'Elegant Table Runner', category: 'home-decor', price: 600, image: '/IMG_3147.JPG', description: 'A long, elegant macramé table runner for dining or console tables.' },
-    { id: 8, name: 'Sling Bag', category: 'bags', price: 1600, image: '/IMG_3151.JPG', description: 'A stylish macramé sling bag, perfect for carrying essentials with flair.' }
+    { id: 1, name: 'Boho Shoulder Bag', category: 'bags', price: 1500, image: '/IMG_3122.JPG', description: 'Handwoven macramé shoulder bag perfect for daily use' },
+    { id: 2, name: 'Wall Hanging - Nature', category: 'home-decor', price: 1200, image: '/IMG_3131.JPG', description: 'Beautiful wall hanging with natural motifs' },
+    { id: 3, name: 'Plant Hanger Set', category: 'home-decor', price: 800, image: '/IMG_3136.JPG', description: 'Set of 3 hanging planters for your green friends' },
+    { id: 4, name: 'Statement Clutch', category: 'bags', price: 900, image: '/IMG_3139.JPG', description: 'Elegant evening clutch with intricate patterns' },
+    { id: 5, name: 'Decorative Wall Art', category: 'home-decor', price: 1800, image: '/IMG_3144.JPG', description: 'Large statement piece for living rooms' },
+    { id: 6, name: 'Crossbody Bag', category: 'bags', price: 1300, image: '/IMG_3145.JPG', description: 'Versatile crossbody bag for modern lifestyle' },
+    { id: 7, name: 'Table Runner', category: 'home-decor', price: 600, image: '/IMG_3147.JPG', description: 'Elegant macramé table runner for dining' },
+    { id: 8, name: 'Bohemian Tote', category: 'bags', price: 1600, image: '/IMG_3151.JPG', description: 'Spacious tote bag with boho charm' }
   ];
 
   const categories = [
