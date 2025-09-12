@@ -13,7 +13,7 @@ const ProductsPage = () => {
     { id: 5, name: 'Bohemian Macrame Tote Bag', category: 'bags', price: 1800, image: '/IMG_3144.JPG', description: 'Spacious tote bag with a stylish macrame design, perfect for daily use.' },
     { id: 6, name: 'Large Statement Wall Art', category: 'home-decor', price: 1300, image: '/IMG_3145.JPG', description: 'A large, versatile macrame wall art piece to make a statement in any room.' },
     { id: 7, name: 'Elegant Table Runner', category: 'home-decor', price: 600, image: '/IMG_3147.JPG', description: 'A long, elegant macramé table runner for dining or console tables.' },
-    { id: 8, name: 'Macrame Clutch Purse', category: 'bags', price: 1600, image: '/IMG_3151.JPG', description: 'A chic and compact clutch bag with beautiful macrame detailing.' }
+    { id: 8, name: 'Sling Bag', category: 'bags', price: 1600, image: '/IMG_3151.JPG', description: 'A stylish macramé sling bag, perfect for carrying essentials with flair.' }
   ];
 
   const categories = [
