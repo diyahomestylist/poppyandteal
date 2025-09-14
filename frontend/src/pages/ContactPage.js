@@ -19,14 +19,14 @@ const ContactPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const whatsappMessage = `Hi! I'm ${formData.name}\nEmail: ${formData.email}\n\nMessage: ${formData.message}`;
-    const phoneNumber = "919381340487";
+    const phoneNumber = "919080961400";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
     window.open(whatsappUrl, '_blank');
   };
 
   const handleQuickWhatsApp = () => {
     const message = "Hi! I'd like to know more about your macramé products.";
-    const phoneNumber = "919381340487";
+    const phoneNumber = "919080961400";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
@@ -102,7 +102,7 @@ const ContactPage = () => {
                   </div>
                   <div className="method-info">
                     <h4>Phone</h4>
-                    <p>+91-9381340487</p>
+                    <p>+91-9080961400</p>
                     <small>Available 9 AM - 7 PM</small>
                   </div>
                 </div>
@@ -143,20 +143,7 @@ const ContactPage = () => {
                 </div>
               </div>
 
-              <div className="business-hours">
-                <h3>Business Hours</h3>
-                <div className="hours-list">
-                  <div className="hours-item">
-                    <span>Monday - Friday</span>
-                    <span>9:00 AM - 7:00 PM</span>
-                  </div>
-                  <div className="hours-item">
-                    <span>Saturday</span>
-                    <span>10:00 AM - 6:00 PM</span>
-                  </div>
-                  <div className="hours-item">
-                    <span>Sunday</span>
-                    <span>Closed</span>
+             
                   </div>
                 </div>
               </div>
