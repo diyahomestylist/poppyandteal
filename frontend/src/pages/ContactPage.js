@@ -124,7 +124,7 @@ const ContactPage = () => {
                   </div>
                   <div className="method-info">
                     <h4>Instagram</h4>
-                    <p>@poppyandteal</p>
+                    <p>@_poppyandteal_</p>
                     <small>Follow for daily updates</small>
                   </div>
                 </div>
