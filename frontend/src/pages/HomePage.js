@@ -271,7 +271,7 @@ const HomePage = () => {
               <h4>Get in Touch</h4>
               <p>📩 poppyandteal@gmail.com</p>
               <p>📞 +91-9080961400</p>
-              <p>📸 @poppyandteal</p>
+              <p>📸 @_poppyandteal_</p>
             </div>
             
             <div className="footer-cta">
