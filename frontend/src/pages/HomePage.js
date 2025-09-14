@@ -40,7 +40,7 @@ const HomePage = () => {
 
   const handleWhatsAppOrder = () => {
     const message = "Hi! I'm interested in your macramé products from Poppy and Teal. Could you please share more details?";
-    const phoneNumber = "919381340487"; // Remove + from the number
+    const phoneNumber = "919080961400"; // Remove + from the number
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
@@ -270,7 +270,7 @@ const HomePage = () => {
             <div className="footer-contact">
               <h4>Get in Touch</h4>
               <p>📩 poppyandteal@gmail.com</p>
-              <p>📞 +91-9381340487</p>
+              <p>📞 +91-9080961400</p>
               <p>📸 @poppyandteal</p>
             </div>
             
