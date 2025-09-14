@@ -19,14 +19,14 @@ const ContactPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const whatsappMessage = `Hi! I'm ${formData.name}\nEmail: ${formData.email}\n\nMessage: ${formData.message}`;
-    const phoneNumber = "919080961400";
+    const phoneNumber = '919080961400'; // no '+' for wa.me
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
     window.open(whatsappUrl, '_blank');
   };
 
   const handleQuickWhatsApp = () => {
     const message = "Hi! I'd like to know more about your macramé products.";
-    const phoneNumber = "919080961400";
+    const phoneNumber = '919080961400';
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, '_blank');
   };
@@ -61,7 +61,7 @@ const ContactPage = () => {
                     required
                   />
                 </div>
-                
+
                 <div className="form-group">
                   <input
                     type="email"
@@ -72,7 +72,7 @@ const ContactPage = () => {
                     required
                   />
                 </div>
-                
+
                 <div className="form-group">
                   <textarea
                     name="message"
@@ -81,9 +81,9 @@ const ContactPage = () => {
                     value={formData.message}
                     onChange={handleInputChange}
                     required
-                  ></textarea>
+                  />
                 </div>
-                
+
                 <button type="submit" className="submit-btn">
                   <Send size={20} />
                   Send via WhatsApp
@@ -94,7 +94,7 @@ const ContactPage = () => {
             {/* Contact Info */}
             <div className="contact-info-section">
               <h2>Contact Information</h2>
-              
+
               <div className="contact-methods">
                 <div className="contact-method">
                   <div className="method-icon">
@@ -142,33 +142,29 @@ const ContactPage = () => {
                   </div>
                 </div>
               </div>
-
-             
-                  </div>
-                </div>
-              </div>
             </div>
+            {/* end contact-info-section */}
           </div>
 
-          {/* FAQ Section */}
+          {/* FAQ Section (kept inside the same container, outside the grid) */}
           <div className="faq-section">
             <h2>Frequently Asked Questions</h2>
             <div className="faq-grid">
               <div className="faq-item">
                 <h4>How long does it take to create a custom piece?</h4>
-                <p>Custom pieces typically take 1-2 weeks, depending on complexity and current orders.</p>
+                <p>Custom pieces typically take 1–2 weeks, depending on complexity and current orders.</p>
               </div>
-              
+
               <div className="faq-item">
                 <h4>Do you ship across India?</h4>
                 <p>Yes, we ship nationwide with secure packaging to ensure your macramé pieces arrive safely.</p>
               </div>
-              
+
               <div className="faq-item">
                 <h4>What materials do you use?</h4>
                 <p>We use high-quality, eco-friendly cotton and jute cords sourced sustainably.</p>
               </div>
-              
+
               <div className="faq-item">
                 <h4>Can I return or exchange items?</h4>
                 <p>Due to the handmade nature, we accept returns only for damaged items. Please contact us within 48 hours of delivery.</p>
